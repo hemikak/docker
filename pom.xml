@@ -266,7 +266,7 @@
         <commons.codec.version>1.12</commons.codec.version>
         <commons.io.version>2.6</commons.io.version>
         <jackson.version>2.9.8</jackson.version>
-        <maven.jacoco.plugin.version>0.8.3</maven.jacoco.plugin.version>
+        <maven.jacoco.plugin.version>0.8.4</maven.jacoco.plugin.version>
         <mvn.processor.plugin.version>2.2.4</mvn.processor.plugin.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
