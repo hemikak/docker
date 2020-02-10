@@ -283,7 +283,7 @@
         <mvn.shaded.plugin.version>3.2.1</mvn.shaded.plugin.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <slf4j.version>1.7.26</slf4j.version>
+        <slf4j.version>1.7.30</slf4j.version>
         <testng.version>6.14.3</testng.version>
         <lombok.version>1.18.10</lombok.version>
     </properties>
