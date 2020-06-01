@@ -46,9 +46,9 @@ dependencies {
     implementation project(':docker-generator')
     implementation "com.github.docker-java:docker-java:${dockerJavaVersion}"
 
-    compileOnly "org.ballerinalang:ballerina-lang:${ballerinaLangVersion}"
+    compileOnly "org.ballerinalang:ballerina-lang:2.0.0-SNAPSHOT"
 
-    testImplementation "org.ballerinalang:ballerina-lang:${ballerinaLangVersion}"
+    testImplementation "org.ballerinalang:ballerina-lang:2.0.0-SNAPSHOT"
     testImplementation "org.testng:testng:${testngVersion}"
 }
 

@@ -65,9 +65,11 @@ subprojects {
         repositories {
             maven {
                 if (project.version.endsWith('-SNAPSHOT')) {
-                    url "https://maven.wso2.org/nexus/content/repositories/snapshots/"
+                    url "http://localhost:8081/repository/maven-snapshots/"
+//                    url "https://maven.wso2.org/nexus/content/repositories/snapshots/"
                 } else {
-                    url "https://maven.wso2.org/nexus/service/local/staging/deploy/maven2/"
+                    url "http://localhost:8081/repository/maven-releases/"
+//                    url "https://maven.wso2.org/nexus/service/local/staging/deploy/maven2/"
                 }
                 credentials {
                     username System.getenv("NEXUS_USERNAME")
@@ -93,6 +95,7 @@ subprojects {
 }
 
 task codeCoverageReport(type: JacocoReport) {
+    dependsOn = subprojects.test
     executionData fileTree(project.rootDir.absolutePath).include("**/build/coverage-reports/*.exec")
 
     subprojects.each {
