@@ -27,7 +27,7 @@ configurations {
 }
 
 dependencies {
-    balTools("org.ballerinalang:jballerina-tools:${ballerinaLangVersion}") {
+    balTools("org.ballerinalang:jballerina-tools:1.2.3") {
         transitive = false
     }
 }
@@ -41,7 +41,7 @@ clean {
     delete "$project.projectDir/Ballerina.lock"
 }
 
-def bDistribution = file("$project.buildDir/extracted-distribution/jballerina-tools-${ballerinaLangVersion}")
+def bDistribution = file("$project.buildDir/extracted-distribution/jballerina-tools-1.2.3")
 
 task unzip {
     doLast {
@@ -67,7 +67,7 @@ task ballerinaBuild {
         exec {
             workingDir project.projectDir
             environment "JAVA_OPTS", "-DBALLERINA_DEV_COMPILE_BALLERINA_ORG=true"
-            def distributionBinPath = project.projectDir.absolutePath + "/build/extracted-distribution/jballerina-tools-${ballerinaLangVersion}/bin"
+            def distributionBinPath = project.projectDir.absolutePath + "/build/extracted-distribution/jballerina-tools-1.2.3/bin"
             if (Os.isFamily(Os.FAMILY_WINDOWS)) {
                 commandLine 'cmd', '/c', "$distributionBinPath/ballerina.bat build -c -a --skip-tests"
             } else {
