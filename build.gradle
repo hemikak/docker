@@ -65,7 +65,7 @@ subprojects {
         repositories {
             maven {
                 if (project.version.endsWith('-SNAPSHOT')) {
-                    url "http://localhost:8081/repository/maven-snapshots/"
+                    url ["http://localhost:8081/repository/maven-snapshots/", "http://localhost:8081/repository/gradle-m2-release1/"]
 //                    url "https://maven.wso2.org/nexus/content/repositories/snapshots/"
                 } else {
                     url "http://localhost:8081/repository/maven-releases/"
